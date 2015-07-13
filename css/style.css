@@ -1,0 +1,16 @@
+body.simple-statistics {
+  font-family: 'Merriweather', Georgia, serif;
+  background: rgba(248, 245, 239, 1.0);
+}
+
+body.simple-statistics a {
+  color: #000;
+}
+
+body.simple-statistics p a {
+  text-decoration: underline;
+}
+
+.underline {
+  text-decoration: underline;
+}
