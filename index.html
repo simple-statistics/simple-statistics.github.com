@@ -24,7 +24,7 @@
     <section id='intro' class='mt4'>
       <div class='sm-flex mxn2'>
         <div class='sm-col-4'>
-          <img src='logo-2.jpg' />
+          <img src='logo-2.jpg' alt='simple statistics logo' />
         </div>
         <div class='col-8 py4 px2'>
           <p class='serif h1 h1-responsive bold m0'>
@@ -85,9 +85,16 @@
           <p>You can use simple-statistics with node.js by installing
           it with npm.</p>
           <pre class='overflow-auto bg-white px1 py1 border'>npm install --save simple-statistics</pre>
-          <p>You can also use it on websites with
-          npm and <a href='http://browserify.org'>browserify</a> or
-          downloading it.</p>
+          <p>The npm package is usable in
+          <a href='http://nodejs.org/'>node.js</a>,
+          <a href='https://iojs.org/en/index.html'>io.js</a>, and the web via
+          <a href='http://browserify.org'>browserify</a> or
+          <a href='https://webpack.github.io/'>webpack</a>.</p>
+
+          <h1 class='mt4 sans h4 caps m0'><a href='#cdn'>CDN</a></h1>
+          <hr class='mt1'>
+          <p>You can also use simple-statistics in webpages from <a href='https://cdnjs.com/libraries/simple-statistics'>cdnjs</a>:</p>
+          <input onclick='selectme(this)' class='overflow-auto bg-white px1 py1 border col-12' value='https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/1.0.0/simple_statistics.min.js' />
         </div>
       </div>
     </section>
@@ -102,5 +109,8 @@
       </div>
     </footer>
   </div>
+  <script>
+  function selectme(elem) { setTimeout(function() { elem.select(); }, 20); }
+  </script>
 </body>
 </html>
