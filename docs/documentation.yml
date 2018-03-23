@@ -5,6 +5,7 @@ toc:
   - sum
   - sumSimple
   - quantile
+  - quantileRank
   - product
   - name: 'Sorted Basic Descriptive Statistics'
     description: |
@@ -14,6 +15,7 @@ toc:
   - minSorted
   - maxSorted
   - quantileSorted
+  - quantileRankSorted
   - name: 'Measures of central tendency'
     description: |
       These are different ways to identifying centers or locations of
