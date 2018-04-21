@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>simple-statistics 5.3.1 | Documentation</title>
+  <title>simple-statistics 5.4.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>simple-statistics</h3>
-          <div class='mb1'><code>5.3.1</code></div>
+          <div class='mb1'><code>5.4.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -636,6 +636,16 @@
                   href='#ttesttwosample'
                   class="">
                   tTestTwoSample
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#permutationtest'
+                  class="">
+                  permutationTest
                   
                 </a>
                 
@@ -1366,7 +1376,7 @@ quantiles in input order</p>
   <p>This function returns the quantile in which one would find the given value in
 the given array. It will require to copy and sort your array beforehand, so
 if you know your array is already sorted, you would rather use
-<code>quantileRank</code>.</p>
+<code>quantileRankSorted</code>.</p>
 
 
   <div class='pre p1 fill-light mt0'>quantileRank(x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
@@ -5448,6 +5458,119 @@ a null hypothesis that the two populations that have been sampled into
     
       
       <pre class='p1 overflow-auto round fill-light'>tTestTwoSample([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>], <span class="hljs-number">0</span>); <span class="hljs-comment">// =&gt; -2.1908902300206643</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='permutationtest'>
+      permutationTest
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Conducts a <a href="https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests">permutation test</a>
+to determine if two data sets are <em>significantly</em> different from each other, using
+the difference of means between the groups as the test statistic.
+The function allows for the following hypotheses:</p>
+<ul>
+<li>two_tail = Null hypothesis: the two distributions are equal.</li>
+<li>greater = Null hypothesis: observations from sampleX tend to be smaller than those from sampleY.</li>
+<li>less = Null hypothesis: observations from sampleX tend to be greater than those from sampleY.
+<a href="https://en.wikipedia.org/wiki/One-_and_two-tailed_tests">Learn more about one-tail vs two-tail tests.</a></li>
+</ul>
+
+
+  <div class='pre p1 fill-light mt0'>permutationTest(sampleX: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, sampleY: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, alternative: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, k: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>sampleX</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    first dataset (e.g. treatment data)
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>sampleY</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    second dataset (e.g. control data)
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>alternative</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    alternative hypothesis, either 'two_sided' (default), 'greater', or 'less'
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>k</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    number of values in permutation distribution.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        p-value The probability of observing the difference between groups (as or more extreme than what we did), assuming the null hypothesis.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">var</span> control = [<span class="hljs-number">2</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>];
+<span class="hljs-keyword">var</span> treatment = [<span class="hljs-number">20</span>, <span class="hljs-number">5</span>, <span class="hljs-number">13</span>, <span class="hljs-number">12</span>, <span class="hljs-number">7</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>];
+permutationTest(control, treatment); <span class="hljs-comment">// ~0.1324</span></pre>
     
   
 
