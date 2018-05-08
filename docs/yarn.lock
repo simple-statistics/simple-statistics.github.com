@@ -3079,9 +3079,9 @@ signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
-simple-statistics@^5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/simple-statistics/-/simple-statistics-5.4.0.tgz#d54c8394d6d611b5f21ad538cc761efe889df018"
+simple-statistics@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/simple-statistics/-/simple-statistics-6.0.0.tgz#abd7ddfcab9a1564374c6d85736dddb54ac8c0a1"
 
 slash@^1.0.0:
   version "1.0.0"
