@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>simple-statistics 6.0.1 | Documentation</title>
+  <title>simple-statistics 6.1.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>simple-statistics</h3>
-          <div class='mb1'><code>6.0.1</code></div>
+          <div class='mb1'><code>6.1.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -786,6 +786,16 @@
                   href='#gamma'
                   class="">
                   gamma
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#gammaln'
+                  class="">
+                  gammaln
                   
                 </a>
                 
@@ -6586,6 +6596,85 @@ Negative values use <a href="https://en.wikipedia.org/wiki/Gamma_function#Proper
       <pre class='p1 overflow-auto round fill-light'>gamma(<span class="hljs-number">11.5</span>); <span class="hljs-comment">// 11899423.084037038</span>
 gamma(<span class="hljs-number">-11.5</span>); <span class="hljs-comment">// 2.29575810481609e-8 </span>
 gamma(<span class="hljs-number">5</span>); <span class="hljs-comment">// 24</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='gammaln'>
+      gammaln
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Compute the logarithm of the <a href="https://en.wikipedia.org/wiki/Gamma_function">gamma function</a> of a value using Lanczos' approximation.
+This function takes as input any real-value n greater than 0.
+This function is useful for values of n too large for the normal gamma function (n > 165).
+The code is based on Lanczo's Gamma approximation, defined <a href="http://my.fit.edu/~gabdo/gamma.txt">here</a>.</p>
+
+
+  <div class='pre p1 fill-light mt0'>gammaln(n: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>n</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    Any real number greater than zero.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        The logarithm of gamma of the input value.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>gammaln(<span class="hljs-number">500</span>); <span class="hljs-comment">// 2605.1158503617335</span>
+gammaln(<span class="hljs-number">2.4</span>); <span class="hljs-comment">// 0.21685932244884043</span></pre>
     
   
 
