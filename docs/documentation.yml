@@ -86,4 +86,5 @@ toc:
   - epsilon
   - factorial
   - gamma
+  - gammaln
   - uniqueCountSorted
