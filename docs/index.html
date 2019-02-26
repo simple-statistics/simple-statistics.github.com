@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>simple-statistics 6.1.0 | Documentation</title>
+  <title>simple-statistics 7.0.1 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -14,7 +14,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>simple-statistics</h3>
-          <div class='mb1'><code>6.1.0</code></div>
+          <div class='mb1'><code>7.0.2</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -1394,9 +1394,9 @@ quantiles in input order</p>
   
 
   <p>This function returns the quantile in which one would find the given value in
-the given array. It will require to copy and sort your array beforehand, so
-if you know your array is already sorted, you would rather use
-<code>quantileRankSorted</code>.</p>
+the given array. It will copy and sort your array before each run, so
+if you know your array is already sorted, you should use <code>quantileRankSorted</code>
+instead.</p>
 
 
   <div class='pre p1 fill-light mt0'>quantileRank(x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, value: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
