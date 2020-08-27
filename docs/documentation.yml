@@ -2,6 +2,7 @@ toc:
   - name: 'Basic Descriptive Statistics'
   - min
   - max
+  - extent
   - sum
   - sumSimple
   - quantile
@@ -80,6 +81,10 @@ toc:
       for instance, because each color will be represented equally.
   - ckmeans
   - equalIntervalBreaks
+  - name: 'Clustering'
+  - kMeansCluster
+  - silhouette
+  - silhouetteMetric
   - name: 'Utilities'
   - chunk
   - chiSquaredGoodnessOfFit
