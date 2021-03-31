@@ -873,6 +873,16 @@
               
                 
                 <li><a
+                  href='#samplerankcorrelation'
+                  class="">
+                  sampleRankCorrelation
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#samplekurtosis'
                   class="">
                   sampleKurtosis
@@ -966,6 +976,16 @@
                   href='#coefficientofvariation'
                   class="">
                   coefficientOfVariation
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#wilcoxonranksum'
+                  class="">
+                  wilcoxonRankSum
                   
                 </a>
                 
@@ -1146,7 +1166,7 @@ This runs in <code>O(n)</code>, linear time, with respect to the length of the a
     <div class='py1 quiet mt1 prose-big'>Throws</div>
     <ul>
       
-        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the the length of x is less than one
+        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the length of x is less than one
 </li>
       
     </ul>
@@ -1230,7 +1250,7 @@ This runs in <code>O(n)</code>, linear time, with respect to the length of the a
     <div class='py1 quiet mt1 prose-big'>Throws</div>
     <ul>
       
-        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the the length of x is less than one
+        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the length of x is less than one
 </li>
       
     </ul>
@@ -1315,7 +1335,7 @@ This runs in <code>O(n)</code>, linear time, with respect to the length of the a
     <div class='py1 quiet mt1 prose-big'>Throws</div>
     <ul>
       
-        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the the length of x is less than one
+        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the length of x is less than one
 </li>
       
     </ul>
@@ -2197,7 +2217,7 @@ a method of finding a typical or central value of a set of numbers.</p>
     <div class='py1 quiet mt1 prose-big'>Throws</div>
     <ul>
       
-        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the the length of x is less than one
+        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the length of x is less than one
 </li>
       
     </ul>
@@ -5472,14 +5492,10 @@ Engineering and Management Science", Wiley (1980).</p>
 
   <p>A standard normal table, also called the unit normal table or Z table,
 is a mathematical table for the values of Φ (phi), which are the values of
-the cumulative distribution function of the normal distribution.
-It is used to find the probability that a statistic is observed below,
-above, or between values on the standard normal distribution, and by
-extension, any normal distribution.</p>
-<p>The probabilities are calculated using the
-<a href="https://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function">Cumulative distribution function</a>.
-The table used is the cumulative, and not cumulative from 0 to mean
-(even though the latter has 5 digits precision, instead of 4).</p>
+the <a href="https://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function">cumulative distribution function</a>
+of the normal distribution. It is used to find the probability that a
+statistic is observed below, above, or between values on the standard
+normal distribution, and by extension, any normal distribution.</p>
 
 
   <div class='pre p1 fill-light mt0'>standardNormalTable</div>
@@ -5628,7 +5644,7 @@ other than the fact that they have the same standard deviation.</p>
 a certain level of significance, will let you determine that the
 null hypothesis can or cannot be rejected.</p>
 <p><code>diff</code> can be omitted if it equals 0.</p>
-<p><a href="http://www.monarchlab.org/Lab/Research/Stats/2SampleT.aspx">This is used to confirm or deny</a>
+<p><a href="https://en.wikipedia.org/wiki/Exclusion_of_the_null_hypothesis">This is used to reject</a>
 a null hypothesis that the two populations that have been sampled into
 <code>sampleX</code> and <code>sampleY</code> are equal to each other.</p>
 
@@ -7383,6 +7399,85 @@ can be done in one step, or constant time.</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='samplerankcorrelation'>
+      sampleRankCorrelation
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The <a href="https://en.wikipedia.org/wiki/Rank_correlation">rank correlation</a> is
+a measure of the strength of monotonic relationship between two arrays</p>
+
+
+  <div class='pre p1 fill-light mt0'>sampleRankCorrelation(x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    first input
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>y</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    second input
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        sample rank correlation
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='samplekurtosis'>
       sampleKurtosis
     </h3>
@@ -8088,7 +8183,7 @@ method should be used instead.</p>
     <div class='py1 quiet mt1 prose-big'>Throws</div>
     <ul>
       
-        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the the length of x is less than one
+        <li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>: if the length of x is less than one
 </li>
       
     </ul>
@@ -8273,6 +8368,98 @@ the number of elements in the list that produced it and the value to remove.</p>
       <pre class='p1 overflow-auto round fill-light'>coefficientOfVariation([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]).toFixed(<span class="hljs-number">3</span>); <span class="hljs-comment">// =&gt; 0.516</span>
 coefficientOfVariation([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]).toFixed(<span class="hljs-number">3</span>); <span class="hljs-comment">// =&gt; 0.527</span>
 coefficientOfVariation([<span class="hljs-number">-1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]).toFixed(<span class="hljs-number">3</span>); <span class="hljs-comment">// =&gt; 1.247</span></pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='wilcoxonranksum'>
+      wilcoxonRankSum
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>This function calculates the Wilcoxon rank sum statistic for the first sample
+with respect to the second. The Wilcoxon rank sum test is a non-parametric
+alternative to the t-test which is equivalent to the
+<a href="https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test">Mann-Whitney U test</a>.
+The statistic is calculated by pooling all the observations together, ranking them,
+and then summing the ranks associated with one of the samples. If this rank sum is
+sufficiently large or small we reject the hypothesis that the two samples come
+from the same distribution in favor of the alternative that one is shifted with
+respect to the other.</p>
+
+
+  <div class='pre p1 fill-light mt0'>wilcoxonRankSum(sampleX: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, sampleY: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>sampleX</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    a sample as an array of numbers
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>sampleY</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    a sample as an array of numbers
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        rank sum for sampleX
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>wilcoxonRankSum([<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">8</span>], [<span class="hljs-number">9</span>, <span class="hljs-number">12</span>, <span class="hljs-number">15</span>]); <span class="hljs-comment">// =&gt; 6</span></pre>
     
   
 
