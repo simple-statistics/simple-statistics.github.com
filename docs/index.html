@@ -873,6 +873,16 @@
               
                 
                 <li><a
+                  href='#jenks'
+                  class="">
+                  jenks
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#samplerankcorrelation'
                   class="">
                   sampleRankCorrelation
@@ -7382,6 +7392,95 @@ can be done in one step, or constant time.</p>
       
       <pre class='p1 overflow-auto round fill-light'>extentSorted([<span class="hljs-number">-100</span>, <span class="hljs-number">-10</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>]); <span class="hljs-comment">// =&gt; [-100, 5]</span></pre>
     
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='jenks'>
+      jenks
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The <strong><a href="http://en.wikipedia.org/wiki/Jenks_natural_breaks_optimization">jenks natural breaks optimization</a></strong>
+is an algorithm commonly used in cartography and visualization to decide
+upon groupings of data values that minimize variance within themselves
+and maximize variation between themselves.</p>
+<p>For instance, cartographers often use jenks in order to choose which
+values are assigned to which colors in a <a href="https://en.wikipedia.org/wiki/Choropleth_map">choropleth</a>
+map.</p>
+
+
+  <div class='pre p1 fill-light mt0'>jenks(data: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>, nClasses: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>data</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>>)</code>
+	    input data, as an array of number values
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>nClasses</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    number of desired classes
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>></code>:
+        array of class break positions
+// split data into 3 break points
+jenks(
+[1, 2, 4, 5, 7, 9, 10, 20]
+, 3) // = 
+[1, 7, 20, 20]
+
+      
+    
+  
+
+  
+
   
 
   
